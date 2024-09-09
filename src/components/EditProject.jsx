@@ -3,19 +3,15 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-
-function AddProject() {
+function EditProject() {
     const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
   return (
-    <div>
-       <Button className='btn btn-success' onClick={handleShow}>
-       ADD PROJECT
-      </Button>
-
-      <Modal show={show} onHide={handleClose} size={"lg"}>
+    <>
+    <i class="fa-regular fa-pen-to-square text-primary" onClick={handleShow}></i>
+    <Modal show={show} onHide={handleClose} size={"lg"}>
         <Modal.Header closeButton>
           <Modal.Title className='text-success'>Add Project</Modal.Title>
         </Modal.Header>
@@ -48,8 +44,8 @@ function AddProject() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   )
 }
 
-export default AddProject
+export default EditProject

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AddProject from './AddProject'
+import EditProject from './EditProject'
 
 function MyProject() {
     return (
@@ -14,7 +15,7 @@ function MyProject() {
                     <h5>Media Player</h5>
 
                     <div className='d-flex ms-auto align-items-center'>
-                        <p>Edit</p>
+                        <EditProject/>
                         <Link className='ms-3 text-success'>
                             <i class="fa-solid fa-link"></i>
                         </Link>
